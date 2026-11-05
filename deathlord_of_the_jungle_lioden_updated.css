@@ -32,25 +32,22 @@
 }
 
 /* ---------- Cosmic artwork background ---------- */
-html {
-  min-height: 100%;
-  background-color: var(--dlot-deep) !important;
-}
-
-body {
-  min-height: 100vh;
+html, body {
+  min-height: 100vh !important;
   background-color: var(--dlot-deep) !important;
   background-image:
     linear-gradient(rgba(5, 3, 17, 0.20), rgba(5, 3, 17, 0.40)),
-    url("https://githubusercontent.com") !important;
-  background-position: center center !important;
+url("https://raw.githubusercontent.com/cubbylubby22-web/Lioden-/main/deathlord-background.png") !important;
+  background-position: center top !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  background-attachment: fixed !important; /* Keeps image frozen while you scroll */
+  background-attachment: fixed !important;
+}
+
+body {
   color: var(--dlot-text) !important;
   font-family: "Trebuchet MS", Arial, sans-serif !important;
 }
-
 /* Keep page content readable while allowing the artwork to show around it. */
 #main, #content, #page-content, main, .container, .container-fluid {
   color: var(--dlot-text) !important;
