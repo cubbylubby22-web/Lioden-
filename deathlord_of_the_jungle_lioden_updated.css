@@ -16,8 +16,8 @@
   color-scheme: dark;
   --dlot-ink: #100923;
   --dlot-deep: #080516;
-  --dlot-panel: rgba(24, 12, 48, 0.94);
-  --dlot-panel-soft: rgba(43, 22, 76, 0.94);
+  --dlot-panel: rgba(24, 12, 48, 0.65); /* Made more translucent */
+  --dlot-panel-soft: rgba(43, 22, 76, 0.65); /* Made more translucent */
   --dlot-lavender: #d9b5ff;
   --dlot-lavender-light: #f0dcff;
   --dlot-purple: #a83cff;
@@ -27,8 +27,8 @@
   --dlot-text: #f4eaff;
   --dlot-muted: #d5c1ed;
   --dlot-border: #9d48e8;
-  --dlot-cell: rgba(174, 119, 224, 0.82);
-  --dlot-cell-alt: rgba(132, 83, 190, 0.86);
+  --dlot-cell: rgba(174, 119, 224, 0.50); /* See-through stat boxes */
+  --dlot-cell-alt: rgba(132, 83, 190, 0.55); /* See-through alternate boxes */
 }
 
 /* ---------- Cosmic artwork background ---------- */
@@ -41,12 +41,12 @@ body {
   min-height: 100vh;
   background-color: var(--dlot-deep) !important;
   background-image:
-    linear-gradient(rgba(5, 3, 17, 0.32), rgba(5, 3, 17, 0.58)),
-    url("https://raw.githubusercontent.com/cubbylubby22-web/Lioden-/main/deathlord-background.png") !important;
-  background-position: center top !important;
+    linear-gradient(rgba(5, 3, 17, 0.20), rgba(5, 3, 17, 0.40)),
+    url("https://githubusercontent.com") !important;
+  background-position: center center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  background-attachment: fixed !important;
+  background-attachment: fixed !important; /* Keeps image frozen while you scroll */
   color: var(--dlot-text) !important;
   font-family: "Trebuchet MS", Arial, sans-serif !important;
 }
