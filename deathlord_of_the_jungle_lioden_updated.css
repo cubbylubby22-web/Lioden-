@@ -42,7 +42,7 @@ body {
   background-color: var(--dlot-deep) !important;
   background-image:
     linear-gradient(rgba(5, 3, 17, 0.32), rgba(5, 3, 17, 0.58)),
-    url("deathlord-background.png") !important;
+    url("https://raw.githubusercontent.com/cubbylubby22-web/Lioden-/main/deathlord-background.png") !important;
   background-position: center top !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
