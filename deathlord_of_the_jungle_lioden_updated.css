@@ -1,0 +1,241 @@
+/*
+  DEATHLORD OF THE JUNGLE — LIODEN THEME
+  Cosmic lion artwork + lavender panels + violet/pink typography.
+
+  IMPORTANT:
+  Upload BOTH this CSS file and "deathlord-background.png" to the SAME
+  GitHub Pages folder/repository location. The relative image URL below
+  will then resolve automatically.
+
+  Add the published CSS URL to Lioden:
+  Den > Edit Your Details > Territory Description (CSS URL field).
+*/
+
+/* ---------- Theme palette ---------- */
+:root {
+  color-scheme: dark;
+  --dlot-ink: #100923;
+  --dlot-deep: #080516;
+  --dlot-panel: rgba(24, 12, 48, 0.94);
+  --dlot-panel-soft: rgba(43, 22, 76, 0.94);
+  --dlot-lavender: #d9b5ff;
+  --dlot-lavender-light: #f0dcff;
+  --dlot-purple: #a83cff;
+  --dlot-violet: #c56bff;
+  --dlot-pink: #ef55f5;
+  --dlot-blue: #388fff;
+  --dlot-text: #f4eaff;
+  --dlot-muted: #d5c1ed;
+  --dlot-border: #9d48e8;
+  --dlot-cell: rgba(174, 119, 224, 0.82);
+  --dlot-cell-alt: rgba(132, 83, 190, 0.86);
+}
+
+/* ---------- Cosmic artwork background ---------- */
+html {
+  min-height: 100%;
+  background-color: var(--dlot-deep) !important;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--dlot-deep) !important;
+  background-image:
+    linear-gradient(rgba(5, 3, 17, 0.32), rgba(5, 3, 17, 0.58)),
+    url("deathlord-background.png") !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  color: var(--dlot-text) !important;
+  font-family: "Trebuchet MS", Arial, sans-serif !important;
+}
+
+/* Keep page content readable while allowing the artwork to show around it. */
+#main, #content, #page-content, main, .container, .container-fluid {
+  color: var(--dlot-text) !important;
+}
+
+/* ---------- Headings and accent text ---------- */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .panel-title {
+  color: var(--dlot-lavender-light) !important;
+  text-shadow:
+    0 0 5px rgba(194, 105, 255, 0.95),
+    0 0 13px rgba(126, 48, 255, 0.72) !important;
+}
+
+a, a:visited {
+  color: var(--dlot-lavender) !important;
+}
+
+a:hover, a:focus {
+  color: #ff9aff !important;
+  text-shadow: 0 0 8px rgba(225, 83, 255, 0.85) !important;
+}
+
+/* ---------- Header and navigation ---------- */
+#header, #topbar, .topbar,
+#navbar, .navbar, nav {
+  background: linear-gradient(
+    100deg,
+    rgba(30, 8, 62, 0.98),
+    rgba(14, 29, 78, 0.97),
+    rgba(49, 9, 72, 0.98)
+  ) !important;
+  color: var(--dlot-text) !important;
+  border-color: var(--dlot-border) !important;
+  box-shadow: 0 2px 16px rgba(129, 44, 255, 0.38) !important;
+}
+
+#header a, #topbar a, .topbar a,
+#navbar a, .navbar a, nav a {
+  color: var(--dlot-lavender-light) !important;
+}
+
+/* ---------- Panels, cards, den/profile sections ---------- */
+.panel, .card, .well, .userbox, .thumbnail,
+.list-group-item, .media, .cave, .cave-card,
+.lion-card, .featured, .box,
+#player, #playerbox, .alert,
+.breadcrumb, .comment, .comment-box,
+#comment-box, .table-responsive {
+  background-color: var(--dlot-panel) !important;
+  color: var(--dlot-text) !important;
+  border: 1px solid rgba(177, 103, 255, 0.78) !important;
+  box-shadow:
+    0 0 12px rgba(130, 45, 220, 0.25),
+    inset 0 0 12px rgba(55, 75, 180, 0.12) !important;
+}
+
+.panel-heading, .card-header, .userbox-header,
+.panel > .panel-heading, th, .table th {
+  background: linear-gradient(
+    100deg,
+    rgba(76, 24, 123, 0.98),
+    rgba(37, 43, 111, 0.98),
+    rgba(83, 25, 125, 0.98)
+  ) !important;
+  color: var(--dlot-lavender-light) !important;
+  border-color: var(--dlot-border) !important;
+}
+
+/* ---------- Tables and the yellow/orange territory stat boxes ---------- */
+/* Override cell fills (including inline background colors) with lavender. */
+table, .table {
+  background-color: rgba(20, 10, 42, 0.96) !important;
+  color: var(--dlot-text) !important;
+  border-color: rgba(171, 103, 238, 0.82) !important;
+}
+
+table tr, .table tr {
+  background-color: transparent !important;
+}
+
+table td, table th,
+.table td, .table th,
+td[style*="background"], th[style*="background"],
+td[bgcolor], th[bgcolor] {
+  background-color: var(--dlot-cell) !important;
+  color: #fff0ff !important;
+  border: 1px solid rgba(225, 190, 255, 0.68) !important;
+}
+
+/* Alternate cells gently, without bringing back the yellow palette. */
+table tr:nth-child(even) td,
+.table tr:nth-child(even) td {
+  background-color: var(--dlot-cell-alt) !important;
+}
+
+/* Text nested inside the stat tiles should stay bright and readable. */
+td, th, td *, th *, .table td *, .table th * {
+  color: #fff0ff !important;
+}
+
+/* ---------- General text ---------- */
+p, li, label, span, small, strong, em,
+.text-muted, .help-block {
+  color: var(--dlot-text);
+}
+
+.text-muted, small, .help-block {
+  color: var(--dlot-muted) !important;
+}
+
+hr {
+  border-color: rgba(190, 105, 255, 0.65) !important;
+}
+
+/* ---------- Forms and buttons ---------- */
+button, .btn, input[type="submit"],
+input[type="button"], input[type="reset"] {
+  background: linear-gradient(135deg, #8d2ed8, #3b4fc0) !important;
+  color: #fff2ff !important;
+  border: 1px solid #d49aff !important;
+  border-radius: 6px !important;
+  box-shadow: 0 0 10px rgba(160, 72, 255, 0.4) !important;
+}
+
+button:hover, .btn:hover, input[type="submit"]:hover,
+input[type="button"]:hover, input[type="reset"]:hover {
+  background: linear-gradient(135deg, #b84aff, #287fdb) !important;
+  color: #ffffff !important;
+}
+
+input, select, textarea, .form-control {
+  background-color: rgba(18, 10, 39, 0.98) !important;
+  color: var(--dlot-text) !important;
+  border: 1px solid #9860ce !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #c9addf !important;
+}
+
+/* ---------- Alerts, comments, chat, progress ---------- */
+.alert, .alert-info, .alert-warning, .alert-danger, .alert-success,
+#chatbox, .chatbox, .chat-box, .chat,
+.chat-message, .chat_message, .chat-messages {
+  background-color: rgba(30, 15, 57, 0.96) !important;
+  color: var(--dlot-text) !important;
+  border-color: var(--dlot-border) !important;
+}
+
+.progress {
+  background-color: rgba(14, 8, 32, 0.98) !important;
+  border: 1px solid #8d58c6 !important;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #8626d8, #367be8, #e34df2) !important;
+}
+
+/* ---------- Footer ---------- */
+footer, #footer, .footer {
+  background: linear-gradient(
+    100deg,
+    rgba(29, 8, 56, 0.98),
+    rgba(9, 25, 62, 0.98),
+    rgba(36, 8, 55, 0.98)
+  ) !important;
+  color: var(--dlot-muted) !important;
+  border-top: 1px solid var(--dlot-border) !important;
+}
+
+/* ---------- Mobile ---------- */
+@media screen and (max-width: 700px) {
+  body {
+    background-attachment: scroll !important;
+    background-position: center top !important;
+    background-size: auto 100vh !important;
+    background-repeat: repeat-y !important;
+  }
+
+  .panel, .card, .well, .userbox, .table-responsive {
+    box-shadow: 0 0 8px rgba(130, 45, 220, 0.24) !important;
+  }
+
+  table, .table {
+    max-width: 100% !important;
+  }
+}
